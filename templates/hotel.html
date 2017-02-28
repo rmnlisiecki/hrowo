@@ -1,0 +1,122 @@
+{% extends 'index-contact.html' %}
+
+{% block heading %}
+        {% include "heading.html" %}
+{% endblock %}
+
+{% block main-choose %}
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <ul class="list-inline text-center tabs-navigation" role="tablist">
+
+                    <li role="presentation" class="active">
+                        <a href="#login" aria-controls="login" role="tab" data-toggle="tab"><span><i class="icon-streetsign"></i></span>{{ 1_choice }}</a>
+                    </li>
+
+                    <li role="presentation">
+                        <a href="#repetitions" aria-controls="repetitions" role="tab" data-toggle="tab"><span><i class="icon-flag"></i></span>{{ 2_choice }}</a>
+                    </li>
+
+                    <li role="presentation">
+                        <a href="#newWords" aria-controls="newWords" role="tab" data-toggle="tab"><span><i class="icon-anchor"></i></span>{{ 3_choice }}</a>
+                    </li>
+
+                    <li role="presentation">
+                        <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><span><i class="icon-magnifying-glass"></i></span>{{ 4_choice }}</a>
+                    </li>
+
+                    <li role="presentation">
+                        <a href="#results" aria-controls="results" role="tab" data-toggle="tab"><span><i class="icon-map"></i></span>{{ 5_choice }}</a>
+                    </li>
+
+                    <li role="presentation">
+                        <a href="#shortcuts" aria-controls="shortcuts" role="tab" data-toggle="tab"><span><i class="icon-tools"></i></span>{{ 6_choice }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div><!--tabs header row end-->
+{% endblock %}
+
+
+{% block selector %}
+        {% include "selector.html" %}
+{% endblock %}
+
+{% block content1 %}
+    {% include "x_proper_candidate.html" %}
+
+    {% for i in "0000000000000000000000000000" %}
+        {% include "x_improper_candidate.html" %}
+    {% endfor %}
+
+{% endblock %}
+
+
+{% block content2 %}
+    {% include "x_proper_candidate.html" %}
+
+    {% for i in "00000000000000000000000" %}
+        {% include "x_improper_candidate.html" %}
+    {% endfor %}
+
+{% endblock %}
+
+
+{% block content3 %}
+
+    {% for i in "000000000000000000000000000000" %}
+        {% include "x_improper_candidate.html" %}
+    {% endfor %}
+
+{% endblock %}
+
+
+{% block content4 %}
+
+    {% for i in "000000000000000000000000000000000" %}
+        {% include "x_improper_candidate.html" %}
+    {% endfor %}
+
+{% endblock %}
+
+
+{% block content5 %}
+
+    {% for i in "000000000000000000000000000000000" %}
+        {% include "x_improper_candidate.html" %}
+    {% endfor %}
+
+{% endblock %}
+
+
+{% block content6 %}
+
+    {% for i in "0000000000000000000000000000000000" %}
+        {% include "x_improper_candidate.html" %}
+    {% endfor %}
+
+{% endblock %}
+
+{% block break1 %}
+        <br><br><br>
+{% endblock %}
+
+{% block break2 %}
+        <br><br><br>
+{% endblock %}
+
+{% block break3 %}
+        <br><br><br>
+{% endblock %}
+
+{% block break4 %}
+        <br><br><br>
+{% endblock %}
+
+{% block break5 %}
+        <br><br><br>
+{% endblock %}
+
+{% block break6 %}
+        <br><br><br>
+{% endblock %}

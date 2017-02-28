@@ -1,0 +1,43 @@
+{% extends 'index-contact.html' %}
+
+{% block heading %}
+    <div role="tabpanel" class="tab-pane active" id="login">
+        <div class="row">
+            <div class="am-content">
+                <div class="main-content">
+                        <!--Select & Option Elements-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel-body">
+                                <div class="container">
+                                    <div class="row">
+
+                                        <div class="contact-home-text">
+                                            <br><br><br><br>
+                                            <h3>Lokalizacja placówek</h3>
+                                            <p>Dbamy o czas: Twój i Twojego dziecka</p><br>
+                                            <p>Poniżej przedstawiamy pełną mapę z naszymi placówkami</p>
+                                            {% include "google_map_poland.html" %}
+                                            <br><br>
+                                            <p>Możesz skontaktować się z nami telefonicznie lub mailowo. W tym drugim przypadku
+                                            prosimy o użycie formularza kontaktowego podanego na stronie głównej.
+                                            Ewentualnie czekamy na Państwa pytania pod adresem kontakt@ekdis.pl
+                                            lub za pomocą formularza zamieszczonego poniżej. Gwarantujemy, że odpowiemy
+                                            tak szybko jak to będzie możliwe, najczęściej w przeciąu jednego dnia roboczego.
+                                            Wiedz, że Twój czas i wygoda jest dla nas priorytetm.</p>
+                                            <br><br>
+
+                                            <hr><br>
+                                        {% include "similar_cars.html" %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--tab content end-->
+</div>
+{% endblock %}
+

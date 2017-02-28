@@ -1,0 +1,173 @@
+
+<form action="#" method="post">
+<div class="col-sm-9 col-sm-offset-2">
+  <fieldset>
+    <div class='form-group'>
+      <div class='col-sm-4'>
+        <label for="user_locale">Potencjalne miejsce pracy</label>
+        <select class="form-control" id="user_locale" name="user[locale]">
+            {% include "cities-districts.html" %}
+        </select>
+      </div>
+      <div class='col-sm-2'>
+        <label for="user_locale">Wynagrodzenie min.</label>
+        <select class="form-control" id="user_locale" name="user[locale]">
+        <option value="0">0 PLN</option>
+        <option value="25000" selected>3 500 PLN</option>
+        <option value="35000">5 000 PLN</option>
+        <option value="45000">7 500 PLN</option>
+        <option value="60000">10 000 PLN</option>
+        <option value="75000">12 500 PLN</option>
+        <option value="90000">15 000 PLN</option>
+        <option value="120000">20 000 PLN</option>
+        </select>
+      </div>
+      <div class='col-sm-2'>
+        <label for="user_locale">Wynagrodzenie max.</label>
+        <select class="form-control" id="user_locale" name="user[locale]">
+        <option value="25000">5 000 PLN</option>
+        <option value="25000">7 500 PLN</option>
+        <option value="35000" selected>10 000 PLN</option>
+        <option value="45000">12 500 PLN</option>
+        <option value="60000">15 000 PLN</option>
+        <option value="75000">20 000 PLN</option>
+        <option value="90000">25 000 PLN</option>
+        <option value="90000">Powyżej 25 000 PLN</option></select>
+      </div>
+      <div class='col-sm-3'>
+        <label for="user_locale">Branża / zawód</label>
+        <select class="form-control" id="user_locale" name="user[locale]">
+        <option value="alfa_romeo">Wszystkie</option>
+        <option value="alfa_romeo">Ekonomia / wszystkie</option>
+        <option value="alfa_romeo" selected>Ekonomia / finanse</option>
+        <option value="audi">Ekonomia / rynki finansowe</option>
+        <option value="en">Ekonomia / audyt</option>
+        <option value="en">Ekonomia / podatki</option>
+        <option value="en">Ekonomia / rachunkowość</option>
+        <option value="en">Prawo / wszystkie</option>
+        <option value="en">Prawo / prawo cywilne</option>
+        <option value="en">Prawo / prawo karne</option>
+        <option value="en">Prawo / prawo administracyjne</option>
+        <option value="en">Prawo / prawo europejskie</option>
+        <option value="en">Informatyka / wszystkie</option>
+        <option value="en">Informatyka / Java</option>
+        <option value="en">Informatyka / C++</option>
+        <option value="en">Informatyka / C#</option>
+        <option value="en">Informatyka / Python</option>
+        <option value="en">Informatyka / Języki niskiego poziomu</option></select>
+      </div>
+
+    </div>
+  </fieldset><br>
+
+  <fieldset>
+    <div class='form-group'>
+
+      <div class='col-sm-3'>
+        <label for="user_locale">Znajomość języka angielskiego</label>
+        <select class="form-control" id="user_locale" name="user[locale]">
+        <option value="alfa_romeo" selected>Wszystkie</option>
+        <option value="alfa_romeo">Początkujący (A1)</option>
+        <option value="audi">Podstawowy (A2)</option>
+        <option value="en">Niżej średnio-zaawansowany (B1)</option>
+        <option value="en">Średnio-zaawansowany (B2)</option>
+        <option value="en">Zaawansowany (C1)</option>
+        <option value="en">Biegły (C2)</option></select>
+      </div>
+
+
+      <div class='col-sm-2'>
+        <label for="user_locale">Doświadczenie min.</label>
+        <select class="form-control" id="user_locale" name="user[locale]">
+        <option value="alfa_romeo">Wszystkie</option>
+        <option value="alfa_romeo">Liceum</option>
+        <option value="audi">Studia licencjackie</option>
+        <option value="en" >Studia magisterskie</option>
+        <option value="en" selected>Absolwent</option>
+        <option value="en">1 rok</option>
+        <option value="en">2 lata</option>
+        <option value="en">3 lata</option>
+        <option value="en">4 lata</option>
+        <option value="en">5 lat</option>
+        <option value="en">6-7 lat</option>
+        <option value="en">7-10 lat</option>
+        <option value="en">11-14 lat</option></select>
+      </div>
+      <div class='col-sm-2'>
+        <label for="user_locale">Doświadczenie max.</label>
+        <select class="form-control" id="user_locale" name="user[locale]">
+        <option value="alfa_romeo" selected>Wszystkie</option>
+        <option value="alfa_romeo">Liceum</option>
+        <option value="audi">Studia licencjackie</option>
+        <option value="en" >Studia magisterskie</option>
+        <option value="en">Absolwent</option>
+        <option value="en">1 rok</option>
+        <option value="en">2 lata</option>
+        <option value="en">3 lata</option>
+        <option value="en">4 lata</option>
+        <option value="en">5 lat</option>
+        <option value="en">6-7 lat</option>
+        <option value="en"  selected>7-10 lat</option>
+        <option value="en">11-14 lat</option></select>
+      </div>
+
+      <div class='col-sm-4'>
+        <label for="user_locale">Ukończone / aktualne studia</label>
+        <select class="form-control" id="user_locale" name="user[locale]">
+        <option value="alfa_romeo" selected>Wszystkie</option>
+        <option value="alfa_romeo">Uniwersytet Warszawski</option>
+        <option value="alfa_romeo">Uniwersytet w Białymstoku</option>
+        <option value="alfa_romeo">Uniwersytet Gdański</option>
+        <option value="alfa_romeo">Uniwersytet im. Adama Mickiewicza w Poznaniu</option>
+        <option value="alfa_romeo">Uniwersytet Jagielloński w Krakowie</option>
+        <option value="alfa_romeo">Uniwersytet Łódzki</option>
+        <option value="alfa_romeo">Uniwersytet Marii Curie-Skłodowskiej w Lublinie</option>
+        <option value="alfa_romeo">Uniwersytet Mikołaja Kopernika w Toruniu</option>
+        <option value="alfa_romeo">Uniwersytet Opolski</option>
+        <option value="alfa_romeo">Uniwersytet Szczeciński</option>
+        <option value="alfa_romeo">Uniwersytet Śląski w Katowicach</option>
+        <option value="alfa_romeo">Uniwersytet Rzeszowski</option>
+        <option value="alfa_romeo">Uniwersytet Warmińsko-Mazurski w Olsztynie</option>
+        <option value="alfa_romeo">Uniwersytet Wrocławski</option>
+        <option value="alfa_romeo">Uniwersytet Kardynała Stefana Wyszyńskiego w Warszawie</option>
+        <option value="alfa_romeo">Uniwersytet Zielonogórski</option>
+        <option value="alfa_romeo">Uniwersytet Kazimierza Wielkiego w Bydgoszczy</option>
+        <option value="alfa_romeo">Uniwersytet Jana Kochanowskiego w Kielcach</option>
+
+        <option value="alfa_romeo">Uniwersytet Ekonomiczny w Katowicach</option>
+        <option value="alfa_romeo">Uniwersytet Ekonomiczny w Krakowie</option>
+        <option value="alfa_romeo">Uniwersytet Ekonomiczny w Poznaniu</option>
+        <option value="alfa_romeo">Szkoła Główna Handlowa w Warszawie</option>
+        <option value="alfa_romeo">Uniwersytet Ekonomiczny we Wrocławiu</option>
+
+        <option value="alfa_romeo">Zachodniopomorski Uniwersytet Technologiczny w Szczecinie</option>
+        <option value="alfa_romeo">Politechnika Warszawska</option>
+        <option value="alfa_romeo">Politechnika Białostocka</option>
+        <option value="alfa_romeo">Akademia Techniczno-Humanistyczna w Bielsku -Białej</option>
+        <option value="alfa_romeo">Politechnika Częstochowska</option>
+        <option value="alfa_romeo">Politechnika Gdańska</option>
+        <option value="alfa_romeo">Politechnika Śląska (Gliwice)</option>
+        <option value="alfa_romeo">Politechnika Świętokrzyska w Kielcach</option>
+        <option value="alfa_romeo">Politechnika Koszalińska</option>
+        <option value="alfa_romeo">Politechnika Krakowska im. Tadeusza Kościuszki</option>
+        <option value="alfa_romeo">Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie</option>
+        <option value="alfa_romeo">Politechnika Lubelska</option>
+        <option value="alfa_romeo">Politechnika Łódzka</option>
+        <option value="alfa_romeo">Politechnika Opolska</option>
+        <option value="alfa_romeo">Politechnika Poznańska</option>
+        <option value="alfa_romeo">Uniwersytet Technologiczno-Humanistyczny im. Kazimierza Pułaskiego w Radomiu</option>
+        <option value="alfa_romeo">Politechnika Rzeszowska im. Ignacego Łukasiewicza</option>
+        <option value="alfa_romeo">Politechnika Wrocławska</option>
+        <option value="alfa_romeo">Uczelnie zagraniczne: Niemcy</option>
+        <option value="alfa_romeo">Uczelnie zagraniczne: Wielka Brytania</option>
+        <option value="alfa_romeo">Uczelnie zagraniczne: Stany Zjednoczone</option>
+        <option value="alfa_romeo">Uczelnie zagraniczne: Azja (Japonia, Chiny)</option>
+        <option value="alfa_romeo">Uczelnie zagraniczne: inne</option></select>
+
+      </div>
+    </div>
+  </fieldset>
+<br>
+<br>
+</div>
+</form>

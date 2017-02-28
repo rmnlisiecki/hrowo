@@ -1,0 +1,41 @@
+{% extends 'index-contact.html' %}
+
+{% block heading %}
+    <div role="tabpanel" class="tab-pane active" id="login">
+        <div class="row">
+            <div class="am-content">
+                <div class="main-content">
+                        <!--Select & Option Elements-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel-body">
+                                <div class="container">
+                                    <div class="row">
+
+                                        <div class="contact-home-text">
+                                            <br><br><br><br>
+                                            <h3>Kontakt & dodatkowe informacje</h3>
+                                            <p>Chętnie odpowiemy na każde Twoje pytanie</p><br>
+                                            <p>Nasza siedziba: Al. Jana Pawła II 19, 00-854 Warszawa</p>
+                                            {% include "google_map.html" %}
+                                            <br><br>
+                                            <p>Skontaktuj się z nami telefonicznie pod numerem + 48 662 213 730 lub mailowo używając adresu kontakt@hrowo.pl.
+                                                Możesz również użyć naszego <a href="hotel">formularza kontaktowego</a> podanego na stronie głównej.</p>
+                                            <p>Gwarantujemy, że odpowiemy na Twoje pytania tak szybko jak to będzie możliwe, robimy to najczęściej w przeciągu
+                                                jednego dnia roboczego. W każdym przypadku jesteśmy dla Ciebie dostępni od poniedziału do piątku w godzinach 08.30-17.30.</p>
+                                            <br>
+
+                                            <hr><br>
+                                        {% include "similar_cars.html" %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--tab content end-->
+
+{% endblock %}
+

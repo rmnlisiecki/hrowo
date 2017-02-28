@@ -1,0 +1,732 @@
+﻿{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Skuteczna nauka jezyków obcych</title>
+
+    <!-- Bootstrap -->
+    <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <link rel="stylesheet" href="{% static 'static/css/style.css' %}">
+
+    <!--plugins-->
+    <link href="static/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="static/bower_components/flexslider/flexslider.css" rel="stylesheet">
+    <link href="static/bower_components/lightbox2/dist/css/lightbox.css" rel="stylesheet">
+    <link href="static/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="static/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="static/owl-carousel/owl.transitions.css" rel="stylesheet">
+    <link href="static/et-line-icons/style.css" rel="stylesheet">
+    <link href="static/css/animate.css" rel="stylesheet">
+    <!--custom css file-->
+    <link href="static/css/style.css" rel="stylesheet">
+    <link href="static/css/style.css.map" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <![endif]-->
+</head>
+<body data-spy="scroll">
+<!-- Static navbar -->
+<nav class="navbar header-v1 header-transparent navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header scroll-to">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">e-languo</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+
+            <ul class="nav scroll-to navbar-nav">
+                <li class="active"><a href="#home">home</a></li>
+                <li><a href="#footer">kontakt</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="button-nav"><a href="#login">Zaloguj się</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav><!--navigation end here-->
+
+<!--intro-->
+<section id="home" class="banner-intro banner-slider">
+    <div class="banner-inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8  col-sm-offset-2 text-center wow animated bounceIn">
+                    <h1>Ucz się za darmo</h1>
+                    <p class="lead">
+                        Nowy, rewelacyjny system nauki języków obcych oparty o precyzyjne algorytmy komputerowe i krzywą zapamiętywania
+                    </p>
+                    <div class="scroll-to banner-buttons">
+                        <a href="#services" class="btn btn-lg btn-skin btn-radius">Rozpocznij naukę<i class="fa fa-angle-down"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--services-->
+<section id="services" class="services-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <ul class="list-inline text-center tabs-navigation" role="tablist">
+
+                    <li role="presentation" class="active">
+                        <a href="#login" aria-controls="login" role="tab" data-toggle="tab" id="loginClick"><span><i class="icon-lock"></i></span>Logowanie</a>
+                    </li>
+
+                    <li role="presentation">
+                        <a href="#repetitions" aria-controls="repetitions" role="tab" data-toggle="tab" id="repetitionsClick"><span><i class="icon-"></i></span>Powtórki</a>
+                    </li>
+
+                    <li role="presentation">
+                        <a href="#newWords" aria-controls="newWords" role="tab" data-toggle="tab" id="newWordsClick" onclick="phpSettingsClick()"><span><i class="icon-mic"></i></span>Nowe słowa</a>
+                    </li>
+
+                    <li role="presentation">
+                        <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab" onclick="phpSettingsClick()"><span><i class="icon-gears"></i></span>Ustawienia</a>
+                    </li>
+
+                    <li role="presentation">
+                        <a href="#results" aria-controls="results" role="tab" data-toggle="tab" onclick="refreshResults()"><span><i class="icon-trophy"></i></span>Wyniki</a>
+                    </li>
+
+                    <li role="presentation">
+                        <a href="#shortcuts" aria-controls="shortcuts" role="tab" data-toggle="tab" onclick="phpGetSchedule()"><span><i class="icon-alarmclock"></i></span>Harmonogram</a>
+                    </li>
+                </ul>
+            </div>
+        </div><!--tabs header row end-->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="tab-content service-tab-content">
+
+                    <!--//******************************************************************************************************************************************************* !-->
+                    <div role="tabpanel" class="tab-pane active" id="login">
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-offset-3 text-center animated fadeInUp">
+                                <div class="am-content">
+                                    <div class="main-content">
+                                        <!--Select & Option Elements-->
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="panel-body">
+                                                    <form action="#" style="border-radius: 0px;" class="form-horizontal group-border-dashed" method="GET">
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">E-mail</label>
+                                                            <div class="col-sm-6">
+                                                                <input class="form-control" id="email"></input>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Hasło</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="password" class="form-control" id="password"></input>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group" style="display: none" id="passwordRepeatDiv">
+                                                            <label class="col-sm-3 control-label">Powtórz hasło</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="password" class="form-control" id="passwordRepeat"></input>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group" id="languageLearntRegisterDiv" style="display: none">
+                                                            <label class="col-sm-3 control-label">Język uczony</label>
+                                                            <div class="col-sm-6">
+                                                                <select class="form-control" id="languageLearntRegister">
+                                                                    <option selected value="Eng">Angielski</option>
+                                                                    <option value="German">Niemiecki</option>
+                                                                    <option value="French">Francuski</option>
+                                                                    <option value="Italian">Włoski</option>
+                                                                    <option value="Russian">Rosyjski</option>
+                                                                    <option value="Norwegian">Norweski</option>
+                                                                    <option value="Chinese">Chiński</option>
+                                                                    <option value="Italian">Włoski</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group" id="languageNativeRegisterDiv" style="display: none">
+                                                            <label class="col-sm-3 control-label">Język ojczysty</label>
+                                                            <div class="col-sm-6">
+                                                                <select class="form-control" id="languageNativeRegister" disabled>
+                                                                    <option selected value="Pol">Polski</option>
+                                                                    <option value="Eng">Angielski</option>
+                                                                    <option value="German">Niemiecki</option>
+                                                                    <option value="French">Francuski</option>
+                                                                    <option value="Spanish">Hiszpański</option>
+                                                                    <option value="Italian">Włoski</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group" id="languageLevelDiv" style="display: none">
+                                                            <label class="col-sm-3 control-label">Poziom</label>
+                                                            <div class="col-sm-6">
+                                                                <select class="form-control" id="languageLevel">
+                                                                    <option selected value="A1">Początkujący (A1)</option>
+                                                                    <option value="A2">Podstawowy (A2)</option>
+                                                                    <option value="B1">Średni (B1)</option>
+                                                                    <option value="B2">Wyżej-średni (B2)</option>
+                                                                    <option value="C1">Zaawansowany (C1)</option>
+                                                                    <option value="C2">Biegły (C2)</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <br>
+                                                    </form>
+
+                                                    <div class="col-sm-8 col-sm-offset-2 center-title">
+                                                        <button class="btn-lg btn-skin" id="loginButton" onclick="loginToPlatform()">Zaloguj</button>
+                                                        <br>
+                                                        <button class="btn-lg btn-skin" id="registerButton" onclick="registerToPlatform()" style="display: none">Zarejestruj</button>
+                                                    </div>
+
+                                                    <br>
+                                                    <div class="col-sm-8 col-sm-offset-2 center-title">
+                                                        <label onclick="registerToPlatformDisplay()" id="registerSwitch">Pierwszy raz w e-languo? Zarejestruj się!</label>
+                                                        <br>
+                                                        <label onclick="loginToPlatformDisplay()" id="loginSwitch" style="display: none">Jesteś już zarejestrowany? Zaloguj się!</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--tab content end-->
+
+                    <!--//******************************************************************************************************************************************************* !-->
+
+                    <div role="tabpanel" class="tab-pane" id="repetitions" >
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-offset-3 text-center animated fadeInUp">
+                                <div class="col-md-12 center-title" id="repetitionsInitial">
+                                    <br>
+                                    <button class="btn-lg btn-skin" id="startLearningButton" onclick="startLearningScript(), getWordsFromDatabase()">Rozpocznij naukę</button>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+
+                                    <div class="col-md-12 feature-box animated">
+                                        <h4 style="color: #000; font-weight:normal">Skróty klawiaturowe</h4>
+                                        <br>
+                                        <p>"1" - odpowiada przyciskowi "Tak, umiem"</p>
+                                        <p>"2" - odpowiada przyciskowi "Nie umiem"</p>
+                                        <p>"Enter" - odpowiada przyciskowi "Pokaż"</p>
+                                    </div><!--tab content end-->
+                                </div>
+
+                                <!-- <div class="col-sm-8 col-sm-offset-2 feature-box animated" style="display: none" style="visibility: hidden;">  !-->
+                                <div id = "mainContentDiv" class="col-sm-8 col-sm-offset-2 feature-box animated" style="display: none">
+                                    <h2 id="text1" style="color: #000; font-weight:normal">Poczekaj...</h2>
+                                    <p id="text2">Jesteśmy w trakcie ładowania Twoich danych...</p>
+                                    <br><br>
+                                    <button class="btn-lg btn-skin" id="showWordButton" style="visibility: hidden" onclick="showWordButtonOnclick()">Pokaż</button>
+                                    <h2 id="text3" style="color: #000; font-weight:normal">English word</h2>
+                                    <p id="text4">Sentence describing the use of this particular word to be added here</p>
+                                    <br><br>
+                                    <button class="btn-lg btn-skin"  id="knowButton" onclick="knowButtonOnclick(), updateWordsInDatabase()">Tak, umiem</button>
+                                    <button class="btn-lg btn-skin" id="notKnowButton" onclick="notKnowButtonOnclick(), updateWordsInDatabaseNotKnow()">Nie umiem</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div><!--tab content end-->
+
+                    <!--//******************************************************************************************************************************************************* !-->
+                    <div role="tabpanel" class="tab-pane" id="newWords">
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-offset-3 text-center animated fadeInUp">
+                                <div class="am-content">
+                                    <div class="main-content">
+                                        <!--Select & Option Elements-->
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="panel-body">
+                                                    <form action="#" style="border-radius: 0px;" class="form-horizontal group-border-dashed" method="GET">
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Liczba słów</label>
+                                                            <div class="col-sm-6">
+                                                                <select class="form-control" id="wordsNumber">
+                                                                    <option value="10">10</option>
+                                                                    <option value="25">25</option>
+                                                                    <option selected value="50">50</option>
+                                                                    <option value="100">100</option>
+                                                                    <option value="150">150</option>
+                                                                    <option value="200">200</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Poziom</label>
+                                                            <div class="col-sm-6">
+                                                                <select class="form-control" id="wordsLevel">
+                                                                    <option value="A1">A1</option>
+                                                                    <option value="A2">A2</option>
+                                                                    <option selected value="B1">B1</option>
+                                                                    <option value="B2">B2</option>
+                                                                    <option value="C1">C1</option>
+                                                                    <option value="C2">C2</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Obszar wiedzy</label>
+                                                            <div class="col-sm-6">
+                                                                <select class="form-control" id="wordsKnowledgeArea" disabled>
+                                                                    <option selected value="Wszystkie">Wszystkie</option>
+                                                                    <option value="Astronomia">Astronomia</option>
+                                                                    <option value="Biznes">Biznes i ekonomia</option>
+                                                                    <option value="Prawo">Prawo</option>
+                                                                    <option value="Medycyna">Medycyna</option>
+                                                                    <option value="Budownictwo">Budownictwo</option>
+                                                                    <option value="Mechanika">Mechanika</option>
+                                                                    <option value="Fizyka">Fizyka</option>
+                                                                    <option value="Chemia">Chemia</option>
+                                                                    <option value="Ogolne">Słowa i wyrażenia ogólne</option>
+                                                                    <option value="Idiomy">Idiomy</option>
+                                                                    <option value="Powiedzenia">Powiedzenia</option>
+                                                                    <option value="Dom">Dom i ogród</option>
+                                                                    <option value="Praca">Praca</option>
+                                                                    <option value="Hobby">Hobby i czas wolny</option>
+                                                                    <option value="Sport">Sport</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Część mowy</label>
+                                                            <div class="col-sm-6">
+                                                                <select class="form-control" id="wordsSpeechPart" disabled>
+                                                                    <option selected value="Wszystkie">Wszystkie</option>
+                                                                    <option value="Rzeczowniki">Rzeczowniki</option>
+                                                                    <option value="Czasowniki">Czasowniki</option>
+                                                                    <option value="Przymiotniki">Przymiotniki</option>
+                                                                    <option value="Przyslowki">Przysłówki</option>
+                                                                    <option value="Przyimki">Przyimki</option>
+                                                                    <option value="Zaimki">Zaimki</option>
+                                                                    <option value="Liczebniki">Liczebniki</option>
+                                                                    <option value="Spojniki">Spójniki</option>
+                                                                    <option value="Pozostale">Pozostałe</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <br><br>
+                                                    </form>
+                                                    <div class="col-sm-8 col-sm-offset-2 center-title">
+                                                        <button class="btn-lg btn-skin" id="addNewWordsButton" onclick="addNewWordsToLearnt()">Wybierz słowa</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--tab content end-->
+
+                    <!--//******************************************************************************************************************************************************* !-->
+                    <div role="tabpanel" class="tab-pane" id="settings">
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-offset-3 text-center animated fadeInUp">
+                                <div class="am-content">
+                                    <div class="main-content">
+                                        <!--Select & Option Elements-->
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="panel-body">
+                                                    <form action="#" style="border-radius: 0px;" class="form-horizontal group-border-dashed" method="GET">
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Język uczony</label>
+                                                            <div class="col-sm-6">
+                                                                <select class="form-control" id="defaultLanguageLearnt">
+                                                                    <option selected value="Eng">Angielski</option>
+                                                                    <option value="German">Niemiecki</option>
+                                                                    <option value="French">Francuski</option>
+                                                                    <option value="Italian">Włoski</option>
+                                                                    <option value="Russian">Rosyjski</option>
+                                                                    <option value="Norwegian">Norweski</option>
+                                                                    <option value="Chinese">Chiński</option>
+                                                                    <option value="Italian">Włoski</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Język ojczysty</label>
+                                                            <div class="col-sm-6">
+                                                                <select class="form-control" id="defaultLanguageNative" disabled>
+                                                                    <option selected value="Pol">Polski</option>
+                                                                    <option value="Eng">Angielski</option>
+                                                                    <option value="German">Niemiecki</option>
+                                                                    <option value="French">Francuski</option>
+                                                                    <option value="Spanish">Hiszpański</option>
+                                                                    <option value="Italian">Włoski</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Domyślna liczba słów do nauki</label>
+                                                            <div class="col-sm-6">
+                                                                <select class="form-control" id="defaultWordsNumber">
+                                                                    <option value="10">10</option>
+                                                                    <option value="25">25</option>
+                                                                    <option selected value="50">50</option>
+                                                                    <option value="100">100</option>
+                                                                    <option value="150">150</option>
+                                                                    <option value="200">200</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Domyślny poziom nauki</label>
+                                                            <div class="col-sm-6">
+                                                                <select class="form-control" id="defaultWordLevelOption">
+                                                                    <option value="a1">A1</option>
+                                                                    <option value="a2">A2</option>
+                                                                    <option selected value="b1">B1</option>
+                                                                    <option value="b2">B2</option>
+                                                                    <option value="c1">C1</option>
+                                                                    <option value="c2">C2</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Opcje dźwięku</label>
+                                                            <div class="col-sm-6">
+                                                                <select class="form-control" id="defaultSoundSettings" disabled>
+                                                                    <option selected value="Slowko">Odtwarzaj samo słówko</option>
+                                                                    <option value="Zdanie">Odtwarzaj samo zdanie</option>
+                                                                    <option value="SlowkoZdanie">Odtwarzaj zarówno słóko jak i zdanie</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Współczynnik zapamiętywania</label>
+                                                            <div class="col-sm-6">
+                                                                <select class="form-control" id="defaultRememberingCoefficient" disabled>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option selected value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="5">5</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                    <br><br>
+                                                    <div class="col-sm-8 col-sm-offset-2 center-title">
+                                                        <button class="btn-lg btn-skin" id="saveUserSettingsButton" onclick="saveUserSettings()">Zapisz ustawienia</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--tab content end-->
+
+                    <!--//******************************************************************************************************************************************************* !-->
+	                    <div role="tabpanel" class="tab-pane" id="results">
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-offset-3 text-center animated fadeInUp">
+                                <div class="col-sm-8 col-sm-offset-2 center-title">
+
+                                    <h4 style="color: #000; font-weight:normal">Procent uczonych słów z danego poziomu</h4>
+                                    <br><br>
+                                    <p>Poziom A1</p>
+                                    <div class="progress">
+                                        <div id="resultsA1" class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:4%">
+                                            0%
+                                        </div>
+                                    </div>
+
+                                    <p>Poziom A2</p>
+                                    <div class="progress">
+                                        <div id="resultsA2" class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:4%">
+                                            0%
+                                        </div>
+                                    </div>
+
+                                    <p>Poziom B1</p>
+                                    <div class="progress">
+                                        <div id="resultsB1" class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:4%">
+                                            0%
+                                        </div>
+                                    </div>
+
+                                    <p>Poziom B2</p>
+                                    <div class="progress">
+                                        <div id="resultsB2" class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:4%">
+                                            0%
+                                        </div>
+                                    </div>
+
+                                    <p>Poziom C1</p>
+                                    <div class="progress">
+                                        <div id="resultsC1" class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:4%">
+                                            0%
+                                        </div>
+                                    </div>
+
+                                    <p>Poziom C2</p>
+                                    <div class="progress">
+                                        <div id="resultsC2" class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:4%">
+                                            0%
+                                        </div>
+                                    </div>
+                                    <br><br>
+                                    <button class="btn-lg btn-skin" id="refreshResultsButton" onclick="refreshResults()">Odśwież</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--tab content end-->
+
+                    <!--//******************************************************************************************************************************************************* !-->
+
+                    <div role="tabpanel" class="tab-pane" id="shortcuts" >
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-offset-3 text-center animated fadeInUp">
+                                <div class="col-md-12 feature-box animated">
+                                    <h4 style="color: #000; font-weight:normal">Harmonogram</h4>
+                                    <br>
+                                    <p>Liczba słów do nauki w kolejnych 10 dniach:</p>
+                                    <p id = "day0">Dzisiaj --> 0 słów</p>
+                                    <p id = "day1">Jutro --> 0 słów</p>
+                                    <p id = "day2">Za 2 dni --> 0 słów</p>
+                                    <p id = "day3">Za 3 dni --> 0 słów</p>
+                                    <p id = "day4">Za 4 dni --> 0 słów</p>
+                                    <p id = "day5">Za 5 dni --> 0 słów</p>
+                                    <p id = "day6">Za 6 dni --> 0 słów</p>
+                                    <p id = "day7">Za 7 dni --> 0 słów</p>
+                                    <p id = "day8">Za 8 dni --> 0 słów</p>
+                                    <p id = "day9">Za 9 dni --> 0 słów</p>
+                                    <p id = "day10">Za 10 dni --> 0 słów</p>
+                                    <br><br>
+                                    <button class="btn-lg btn-skin" id="phpGetScheduleButton" onclick="phpGetSchedule()">Odśwież</button>
+                                    <!--- <iframe width="100%" height="425" src="https://www.youtube.com/embed/AM3RydRXn_g">
+                                        //https://www.youtube.com/watch?v=AM3RydRXn_g
+                                    </iframe> !-->
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--tab content end-->
+
+                    <!--//******************************************************************************************************************************************************* !-->
+<audio autoplay>
+    <source src="/static/sound/SOUND.mp3" type="audio/mpeg">
+    <source src="/static/sound/SOUND.ogg" type="audio/ogg">
+    <source src="/static/sound/SOUND.wav" type="audio/wav">
+    <source src="/static/sound/SOUND.aiff" type="audio/x-aiff">
+    <object>
+        <param name="autostart" value="true">
+        <param name="src" value="/static/sound/SOUND.mp3">
+        <param name="autoplay" value="true">
+        <param name="controller" value="false">
+        <embed src="/static/sound/SOUND.mp3" controller="false" autoplay="true" autostart="true" type="audio/mpeg"></embed>
+    </object>
+</audio>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--end services-->
+
+
+<!--********************************************************************   scripts   ********************************************************************************************-->
+
+<script>
+    function startLearningScript(){
+        if ($("#email").val() != ""){
+            document.getElementById("mainContentDiv").style.display = "block";
+            document.getElementById("mainContentDiv").style.visibility = "hidden";
+            document.getElementById("repetitionsInitial").style.display = "none";
+            document.getElementById("startLearningButton").style.display = "none";
+            //document.getElementById("repetitionsMainContent1").style.visibility = "visible";
+            document.getElementById("text1").style.visibility = "visible";
+            document.getElementById("text2").style.visibility = "visible";
+            document.getElementById("showWordButton").style.visibility = "hidden";
+        } else {
+            alert("Błąd! Aby rozpocząć naukę zaloguj się do serwisu!");
+            $("#loginClick").click();
+        }
+    }
+
+    function showWordButtonOnclick(){
+        //document.getElementById("repetitionsMainContent2").style.visibility = "visible";
+        document.getElementById("text3").style.visibility = "visible";
+        document.getElementById("text4").style.visibility = "visible";
+        document.getElementById("knowButton").style.visibility = "visible";
+        document.getElementById("notKnowButton").style.visibility = "visible";
+
+        document.getElementById("knowButton").style.visibility = "visible";
+        document.getElementById("notKnowButton").style.visibility = "visible";
+        document.getElementById("showWordButton").style.visibility = "hidden";
+        playSound();
+    }
+
+    function knowButtonOnclick(){
+        document.getElementById("repetitionsInitial").style.display = "none";
+        document.getElementById("startLearningButton").style.display = "none";
+        //document.getElementById("repetitionsMainContent2").style.visibility = "hidden";
+        document.getElementById("text3").style.visibility = "hidden";
+        document.getElementById("text4").style.visibility = "hidden";
+        document.getElementById("knowButton").style.visibility = "hidden";
+        document.getElementById("notKnowButton").style.visibility = "hidden";
+        //document.getElementById("showWordButton").style.visibility = "visible";
+    }
+
+    function notKnowButtonOnclick(){
+        document.getElementById("repetitionsInitial").style.display = "none";
+        document.getElementById("startLearningButton").style.display = "none";
+        //document.getElementById("repetitionsMainContent2").style.visibility = "hidden";
+        document.getElementById("text3").style.visibility = "hidden";
+        document.getElementById("text4").style.visibility = "hidden";
+        document.getElementById("knowButton").style.visibility = "hidden";
+        document.getElementById("notKnowButton").style.visibility = "hidden";
+
+        //document.getElementById("showWordButton").style.visibility = "visible";
+    }
+
+    function registerToPlatformDisplay(){
+        document.getElementById("passwordRepeatDiv").style.display = "block";
+        document.getElementById("languageLearntRegisterDiv").style.display = "block";
+        document.getElementById("languageNativeRegisterDiv").style.display = "block";
+        document.getElementById("languageLevelDiv").style.display = "block";
+        document.getElementById("loginButton").style.display = "none";
+        document.getElementById("registerButton").style.display = "inline";
+
+        document.getElementById("registerSwitch").style.display = "none";
+        document.getElementById("loginSwitch").style.display = "inline";
+    }
+
+    function loginToPlatformDisplay(){
+        document.getElementById("passwordRepeatDiv").style.display = "none";
+        document.getElementById("languageLearntRegisterDiv").style.display = "none";
+        document.getElementById("languageNativeRegisterDiv").style.display = "none";
+        document.getElementById("languageLevelDiv").style.display = "none";
+        document.getElementById("loginButton").style.display = "inline";
+        document.getElementById("registerButton").style.display = "none";
+
+        document.getElementById("registerSwitch").style.display = "block";
+        document.getElementById("loginSwitch").style.display = "none";
+    }
+</script>
+
+
+<!--********************************************************************   end scripts   ********************************************************************************************-->
+
+<!--footer start-->
+<footer class="footer" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 margin-b-30">
+                <h2>e-languo</h2>
+                <p>
+                    Zadowolenie naszych klientow jest dla nas kluczowe. Stworzyliśmy system w ramach którego proponujemy proste i jasne reguły gry od samego początku nauki. Twoja wiedza jest dla nas priorytetem.
+                </p>
+                <div class="space-20"></div>
+                <a href="#contact" class="btn btn-skin btn-radius btn-lg">Zaloguj się już dziś!</a>
+            </div>
+            <div class="col-sm-4 margin-b-30">
+                <h2>Kontakt</h2>
+                <ul class="list-unstyled clearfix">
+                    <li class="clearfix">
+                        <i class="fa fa-map-marker"></i>
+                        <span>Al. Jana Pawła II 25, 00-854 Warszawa, Polska</span>
+                    </li>
+                    <li class="clearfix">
+                        <i class="fa fa-envelope-o"></i>
+                        <span><a href='#contact'>kontakt@e-languo.com.pl</a></span>
+                    </li>
+                    <li class="clearfix">
+                        <i class="fa fa-phone"></i>
+                        <span>+48 66 22 13 730</span>
+                    </li>
+                </ul>
+            </div><!--col4 end-->
+            <div class="col-sm-4 margin-b-30">
+                <h2>Poznaj nas</h2>
+                <ul class="list-inline clearfix">
+                    <li><a href='#'><i class="fa fa-facebook-official"></i></a></li>
+                    <li><a href='#'><i class="fa fa-twitter"></i></a></li>
+                    <li><a href='#'><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href='#'><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href='#'><i class="fa fa-youtube"></i></a></li>
+                </ul>
+            </div><!--col4 end-->
+        </div><!--row end-->
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="footer-bottom">
+                    <ul class="list-inline">
+                        <li><a href='#'>Home</a></li>
+                        <li><a href='#'>Wiadomości</a></li>
+                        <li><a href='#'>Pomoc</a></li>
+                        <li><a href='#'>Warunki</a></li>
+                        <li><a href='#'>Prywatność</a></li>
+                    </ul>
+                    <span>&copy; Wszelkie prawa zastrzeżone. e-languo</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer end-->
+
+
+<script src="static/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="static/js/jquery-migrate.min.js" type="text/javascript"></script>
+<script src="static/js/jquery.easing.1.3.min.js" type="text/javascript"></script>
+<script src="static/js/jquery.backstretch.min.js" type="text/javascript"></script>
+<script src="static/bootstrap/js/bootstrap.min.js"></script>
+<script src="static/js/smoothscroll.js"></script>
+<script src="static/bower_components/wow/dist/wow.min.js"></script>
+<script src="static/bower_components/lightbox2/dist/js/lightbox.min.js" type="text/javascript"></script>
+<script src="static/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
+<script src="static/js/modernizr.custom.97074.js" type="text/javascript"></script>
+<script src="static/js/parallax.min.js" type="text/javascript"></script>
+<script src="static/js/custom.js" type="text/javascript"></script>
+<!-- Vimeo video API -->
+<script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
+<script type="text/javascript" src="static/js/vimeo.js"></script>
+</body>
+</html>

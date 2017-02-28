@@ -1,0 +1,69 @@
+{% extends 'index-contact.html' %}
+
+{% block heading %}
+    <div role="tabpanel" class="tab-pane active" id="login">
+        <div class="row">
+            <div class="am-content">
+                <div class="main-content">
+                        <!--Select & Option Elements-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel-body">
+                                <div class="container">
+                                    <div class="row">
+
+                                        <div class="contact-home-text">
+                                            <br><br><br><br>
+                                            <h3>Opłaty & koszty organizacji zajęć</h3>
+                                            <p>Dowiedz się od czego zależy Twoja cena</p><br>
+                                            <p>Cena za pobyt Twojego dziecka w placówce nie jest stała i zależy od wielu czynników. Poniżej pogrupowaliśmy
+                                                je w kilka głównych grup, od których zależy znacząca część płaconej ceny. </p>
+                                            <ul>
+                                                <li>Liczba dzieci w placówce</li>
+                                                <li>Miasto pobytu</li>
+                                                <li>Atrakcyjność lokalizacji</li>
+                                                <li>Liczba i rodzaj wybranych zajęć</li>
+                                                <li>Wystrój placówki</li>
+                                                <li>Wyżywienie</li>
+                                                <li>Inne czynniki, specyficzne dla danego miejsca</li>
+                                            </ul>
+                                            <br><br>
+                                        {% include "table_costs.html" %}
+                                            <br>
+                                            <p>Dodatkowo wprowadziliśmy odpowiedni mnożnik uzależniony od parametrów danej placówki.
+                                            Z uwagi na różnice w przyjętych mnożnikach prosimy postrzegać przedstawione wyliczenia
+                                                wyłącznie jako szacunkowe - koszt poszczególnej placówki znajdziesz w szczegółowym opisie
+                                                każdej z lokalizacji.</p>
+
+                                        {% include "table_costs_factors.html" %}
+                                        <br>
+                                        </div>
+                                                                                <p>Przykład:</p>
+                                        <p>Janek chodzi do przedszkola w Gdańsku, położonego w prstiżowej dzielnicy
+                                            Jelitkowo. Uczęszcza na bogaty zakres zajęć dodatkowych o standardzie *****.
+                                        Dodatkowo rodzice postanowili wprowadzić bardzo nowoczesny design, z dużą liczbą
+                                        nowoczesnych, markowych zabawek. Wyżywienie jest nabywane w lokalnej restauracji
+                                        słynącej z jedzenia najwyższej jakości. Dodatkowo rodzice zażyczyli sobie, żeby dzieci
+                                        2 razy w tygodniu chodziły do kina, teatru lub opery. Stąd rodzice Janka płącą
+                                        comiesięczną składkę w wysokości:</p>
+                                        <p>Stawka podstawowa 600 PLN / m-c * 1.20x (lokalizacja) * 1.10x (intensywność zajęć
+                                        dodaktowych) * 1.20x (wystrój & design) * 1.15x (wyżywienie) * 1.25x (kino, opera i teatr)
+                                        = 1 366 PLN / m-c</p>
+                                        <br><br><p>Pamiętaj, powyższe wyliczenia mają charakter poglądowy, w sekcji
+                                        <a href="hotel">"Propozycja placówek"</a> każdorazowo podana jest
+                                        dokładna stawka uwzględniająca wszystkie powyższe elementy.</p><br>
+
+                                        <br><br><hr><br>
+                                        {% include "similar_cars.html" %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--tab content end-->
+
+{% endblock %}
+

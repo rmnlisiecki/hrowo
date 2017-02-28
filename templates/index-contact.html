@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>HRowo.pl - wierzymy w efektywną rekrutację talentów!</title>
+
+        <!-- Bootstrap -->
+        <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!--plugins-->
+        <link href="static/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="static/bower_components/flexslider/flexslider.css" rel="stylesheet">
+        <link href="static/owl-carousel/owl.carousel.css" rel="stylesheet">
+        <link href="static/owl-carousel/owl.theme.css" rel="stylesheet">
+        <link href="static/owl-carousel/owl.transitions.css" rel="stylesheet">
+        <link href="static/et-line-icons/style.css" rel="stylesheet">
+        <link href="static/css/animate.css" rel="stylesheet">
+        <!--custom css file-->
+        <link href="static/css/style.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body data-spy="scroll">
+    <!-- Static navbar -->
+    <!-- Static navbar -->
+
+        <header class="navbar navbar-default header-v2 navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header scroll-to">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="hotel">HRowo.pl</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+
+                    <ul class="nav scroll-to navbar-nav"> 
+                        <li class="{{ ifActivePlaces }}"><a href="hotel">Lista kandydatów</a></li>
+{% comment %}
+                        <li class="{{ ifActiveLocation_map }}"><a href="location_map">Mapa lokalizacji</a></li>
+                        <li class="{{ ifActiveTable_activities }}"><a href="table_activities">Zajęcia grupowe</a></li>
+                        <!--        <li><a href="food">Posiłki</a></li>             -->
+                        <li class="{{ ifActiveCosts }}"><a href="costs">Koszty</a></li>
+                        <li class="{{ ifActiveInterior }}"><a href="interior_design">Wystrój wnętrz</a></li>
+
+
+{% endcomment %}
+                        <li class="{{ ifActiveContact }}"><a href="contact">Kontakt</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right socials">
+                        <!--<li><a class="podpowiedz" href="#"><i class="icon-facebook"></i><span>To jest wytłumacze</span></a></li> -->
+                        <li><a class="podpowiedz" href="https://pl-pl.facebook.com/"><i class="icon-facebook"></i><span style="font-size: 12px">Znajdź nas na Facebook</span></a></li>
+                        <li><a class="podpowiedz" href="https://twitter.com/?lang=pl"><i class="icon-twitter"></i><span style="font-size: 12px">Znajdź nas na Twitterze</span></a></li>
+                        <li><a class="podpowiedz" href="https://plus.google.com/?hl=pl"><i class="fa fa-google-plus"></i><span style="font-size: 12px">Znajdź nas na Google+</span></a></li>
+                        <li><a class="podpowiedz" href="https://pl.linkedin.com/"><i class="icon-linkedin"></i><span style="font-size: 12px">Znajdź nas na LinkedIn</span></a></li>
+                        <li><a class="podpowiedz" href="https://www.youtube.com/"><i class="fa fa-youtube"></i><span style="font-size: 12px">Znajdź nas na Youtube</span></a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+        </header><!--navigation end here-->
+
+    {% block heading %}{% endblock %}
+
+
+    <br><br>
+    <div class="container-fluid">
+
+
+        {% block selector %}{% endblock %}
+
+        {% block main-choose %}{% endblock %}
+                    <!--//******************************************************************************************************************************************************* !-->
+                    <!--//******************************************************************************************************************************************************* !-->
+
+        {% block main-content %}
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="tab-content service-tab-content">
+
+                    <!--//******************************************************************************************************************************************************* !-->
+                    <div role="tabpanel" class="tab-pane active" id="login">
+                        <div class="row">
+                            <div class="am-content">
+                                <div class="main-content">
+                                        <!--Select & Option Elements-->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="panel-body">
+                                                <div class="container">
+                                                    <div class="row">
+
+                                                        {% block content1 %}{% endblock %}
+
+                                                    </div>
+                                                {% block break1 %}{% endblock %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--tab content end-->
+
+                    <!--//******************************************************************************************************************************************************* !-->
+
+                    <div role="tabpanel" class="tab-pane" id="repetitions" >
+                        <div class="row">
+                            <div class="am-content">
+                                <div class="main-content">
+                                        <!--Select & Option Elements-->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="panel-body">
+                                                <div class="container">
+                                                    <div class="row">
+
+                                                        {% block content2 %}{% endblock %}
+
+                                                    </div>
+                                                    {% block break2 %}{% endblock %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--tab content end-->
+
+                    <!--//******************************************************************************************************************************************************* !-->
+                    <div role="tabpanel" class="tab-pane" id="newWords">
+                        <div class="row">
+                            <div class="am-content">
+                                <div class="main-content">
+                                        <!--Select & Option Elements-->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="panel-body">
+                                                <div class="container">
+                                                    <div class="row">
+
+                                                        {% block content3 %}{% endblock %}
+
+                                                    </div>
+                                                {% block break3 %}{% endblock %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--tab content end-->
+
+                    <!--//******************************************************************************************************************************************************* !-->
+                    <div role="tabpanel" class="tab-pane" id="settings">
+                        <div class="row">
+                            <div class="am-content">
+                                <div class="main-content">
+                                        <!--Select & Option Elements-->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="panel-body">
+                                                <div class="container">
+                                                    <div class="row">
+
+                                                        {% block content4 %}{% endblock %}
+
+                                                    </div>
+                                                {% block break4 %}{% endblock %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--tab content end-->
+
+                    <!--//******************************************************************************************************************************************************* !-->
+
+
+                    <div role="tabpanel" class="tab-pane" id="results" >
+                        <div class="row">
+                            <div class="am-content">
+                                <div class="main-content">
+                                        <!--Select & Option Elements-->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="panel-body">
+                                                <div class="container">
+                                                    <div class="row">
+
+                                                        {% block content5 %}{% endblock %}
+
+                                                    </div>
+                                                {% block break5 %}{% endblock %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--tab content end-->
+
+                    <!--//******************************************************************************************************************************************************* !-->
+
+
+                    <div role="tabpanel" class="tab-pane" id="shortcuts" >
+                        <div class="row">
+                            <div class="am-content">
+                                <div class="main-content">
+                                        <!--Select & Option Elements-->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="panel-body">
+                                                <div class="container">
+                                                    <div class="row">
+
+                                                        {% block content6 %}{% endblock %}
+
+                                                    </div>
+                                                {% block break6 %}{% endblock %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--tab content end-->
+                    <!--
+                    <div role="tabpanel" class="tab-pane" id="shortcuts" >
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-offset-3 text-center animated fadeInUp">
+                                <div class="am-content">
+                                    <div class="main-content">
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="panel-body">
+                                                    <form action="#" style="border-radius: 0px;" class="form-horizontal group-border-dashed" method="GET">
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">E-mail</label>
+                                                            <div class="col-sm-6">
+                                                                <input class="form-control" id="email"></input>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label class="col-sm-3 control-label">Hasło</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="password" class="form-control" id="password"></input>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group" style="display: none" id="passwordRepeatDiv">
+                                                            <label class="col-sm-3 control-label">Powtórz hasło</label>
+                                                            <div class="col-sm-6">
+                                                                <input type="password" class="form-control" id="passwordRepeat"></input>
+                                                            </div>
+                                                        </div>
+
+                                                        <br>
+                                                    </form>
+
+                                                    <div class="col-sm-8 col-sm-offset-2 center-title">
+                                                        <button class="btn-lg btn-skin" id="loginButton" onclick="loginToPlatform()">Zaloguj</button>
+                                                        <br>
+                                                        <button class="btn-lg btn-skin" id="registerButton" onclick="registerToPlatform()" style="display: none">Zarejestruj</button>
+                                                    </div>
+
+                                                    <br>
+                                                    <div class="col-sm-8 col-sm-offset-2 center-title">
+                                                        <label onclick="registerToPlatformDisplay()" id="registerSwitch">Pierwszy raz w nazwa.pl? Zarejestruj się!</label>
+                                                        <br>
+                                                        <label onclick="loginToPlatformDisplay()" id="loginSwitch" style="display: none">Jesteś już zarejestrowany? Zaloguj się!</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><-->
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+
+
+    </div>
+</section>
+<!--end services-->
+
+
+
+<!--********************************************************************   scripts   ********************************************************************************************-->
+
+<script>
+    function startLearningScript(){
+        if ($("#email").val() != ""){
+            document.getElementById("mainContentDiv").style.display = "block";
+            document.getElementById("mainContentDiv").style.visibility = "hidden";
+            document.getElementById("repetitionsInitial").style.display = "none";
+            document.getElementById("startLearningButton").style.display = "none";
+            //document.getElementById("repetitionsMainContent1").style.visibility = "visible";
+            document.getElementById("text1").style.visibility = "visible";
+            document.getElementById("text2").style.visibility = "visible";
+            document.getElementById("showWordButton").style.visibility = "hidden";
+        } else {
+            alert("Błąd! Aby rozpocząć naukę zaloguj się do serwisu!");
+            $("#loginClick").click();
+        }
+    }
+
+    function showWordButtonOnclick(){
+        //document.getElementById("repetitionsMainContent2").style.visibility = "visible";
+        document.getElementById("text3").style.visibility = "visible";
+        document.getElementById("text4").style.visibility = "visible";
+        document.getElementById("knowButton").style.visibility = "visible";
+        document.getElementById("notKnowButton").style.visibility = "visible";
+
+        document.getElementById("knowButton").style.visibility = "visible";
+        document.getElementById("notKnowButton").style.visibility = "visible";
+        document.getElementById("showWordButton").style.visibility = "hidden";
+        playSound();
+    }
+
+    function knowButtonOnclick(){
+        document.getElementById("repetitionsInitial").style.display = "none";
+        document.getElementById("startLearningButton").style.display = "none";
+        //document.getElementById("repetitionsMainContent2").style.visibility = "hidden";
+        document.getElementById("text3").style.visibility = "hidden";
+        document.getElementById("text4").style.visibility = "hidden";
+        document.getElementById("knowButton").style.visibility = "hidden";
+        document.getElementById("notKnowButton").style.visibility = "hidden";
+        //document.getElementById("showWordButton").style.visibility = "visible";
+    }
+
+    function notKnowButtonOnclick(){
+        document.getElementById("repetitionsInitial").style.display = "none";
+        document.getElementById("startLearningButton").style.display = "none";
+        //document.getElementById("repetitionsMainContent2").style.visibility = "hidden";
+        document.getElementById("text3").style.visibility = "hidden";
+        document.getElementById("text4").style.visibility = "hidden";
+        document.getElementById("knowButton").style.visibility = "hidden";
+        document.getElementById("notKnowButton").style.visibility = "hidden";
+
+        //document.getElementById("showWordButton").style.visibility = "visible";
+    }
+
+    function registerToPlatformDisplay(){
+        document.getElementById("passwordRepeatDiv").style.display = "block";
+        document.getElementById("languageLearntRegisterDiv").style.display = "block";
+        document.getElementById("languageNativeRegisterDiv").style.display = "block";
+        document.getElementById("languageLevelDiv").style.display = "block";
+        document.getElementById("loginButton").style.display = "none";
+        document.getElementById("registerButton").style.display = "inline";
+
+        document.getElementById("registerSwitch").style.display = "none";
+        document.getElementById("loginSwitch").style.display = "inline";
+    }
+
+    function loginToPlatformDisplay(){
+        document.getElementById("passwordRepeatDiv").style.display = "none";
+        document.getElementById("languageLearntRegisterDiv").style.display = "none";
+        document.getElementById("languageNativeRegisterDiv").style.display = "none";
+        document.getElementById("languageLevelDiv").style.display = "none";
+        document.getElementById("loginButton").style.display = "inline";
+        document.getElementById("registerButton").style.display = "none";
+
+        document.getElementById("registerSwitch").style.display = "block";
+        document.getElementById("loginSwitch").style.display = "none";
+    }
+</script>
+
+
+{#        <div class="clients">#}
+{#            <div class="container">#}
+{#                <ul class="list-inline text-center">#}
+{#                    <li><a href="#">#}
+{#                            <img src="static/images/cl-1.png" alt="">#}
+{#                        </a></li>#}
+{#                    <li><a href="#">#}
+{#                            <img src="static/images/cl-2.png" alt="">#}
+{#                        </a></li>#}
+{#                    <li><a href="#">#}
+{#                            <img src="static/images/cl-3.png" alt="">#}
+{#                        </a></li>#}
+{#                    <li><a href="#">#}
+{#                            <img src="static/images/cl-4.png" alt="">#}
+{#                        </a></li>#}
+{#                    <li><a href="#">#}
+{#                            <img src="static/images/cl-5.png" alt="">#}
+{#                        </a></li>#}
+{#                </ul>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+         <!--subscribe-->
+        <section id="newsletter" class="newsletter-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 center-title">
+                        <i class="icon-envelope"></i>
+                        <h2>Otrzymuj najświeższe informacje!</h2>
+                        <p>Zawsze na bieżąco. Cotygodniowa porcja nowych wiadomości.</p>
+                    </div>
+                </div><!--center title row end-->
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <form role="form" method="post" action="#" class="subscribe-form  assan-newsletter">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="email" placeholder="Wprowadz swój adres e-mail">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-lg btn-skin btn-radius" name="submit" type="submit">Prześlij</button>
+                                </span>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--end subscribe-->
+
+        <!--footer start-->
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 margin-b-30">
+                        <h2>HRowo.pl</h2>
+                        <p>
+                            Zadowolenie naszych klientow jest dla nas kluczowe. Stworzyliśmy system w ramach którego proponujemy proste i jasne reguły gry od samego początku. Wierzymy w szybką rekrutację najlepszych osób i będziemy robić wszystko, aby Was w tym wspierać.
+                        </p>
+                        <div class="space-20"></div>
+                        <a href="contact" class="btn btn-skin btn-radius btn-lg">Zacznijmy współpracę już dziś!</a>
+                    </div>
+                    <div class="col-sm-4 margin-b-30">
+                        <h2>Kontakt</h2>
+                        <ul class="list-unstyled clearfix">
+                            <li class="clearfix">
+                                <i class="fa fa-map-marker"></i>
+                                <span>Al. Jana Pawła II 25, 00-854 Warszawa, Polska</span>
+                            </li>
+                            <li class="clearfix">
+                                <i class="fa fa-envelope-o"></i>
+                                <span><a href='#contact'>kontakt@hrowo.pl</a></span>
+                            </li>
+                            <li class="clearfix">
+                                <i class="fa fa-phone"></i>
+                                <span>+48 66 22 13 730</span>
+                            </li>
+                        </ul>
+                    </div><!--col4 end-->
+                    <div class="col-sm-4 margin-b-30">
+                        <h2>Poznaj nas</h2>
+                        <ul class="list-inline clearfix">
+                            <li><a href='https://pl-pl.facebook.com/'><i class="fa fa-facebook-official"></i></a></li>
+                            <li><a href='https://twitter.com/?lang=pl'><i class="fa fa-twitter"></i></a></li>
+                            <li><a href='https://plus.google.com/?hl=pl'><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href='https://pl.linkedin.com/'><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href='https://www.youtube.com/'><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                    </div><!--col4 end-->
+                </div><!--row end-->
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="footer-bottom">
+                            <ul class="list-inline">
+                                <li><a href='#'>Home</a></li>
+                                <li><a href='#'>Wiadomości</a></li>
+                                <li><a href='#'>Pomoc</a></li>
+                                <li><a href='#'>Warunki</a></li>
+                                <li><a href='#'>Prywatność</a></li>
+                            </ul>
+                            <span>&copy; Wszelkie prawa zastrzeżone. HRowo.pl</span>
+
+                            <br><br><br><br>
+                            <div class="col-sm-12 margin-b-30">
+                                <p style="font-size: 12px; line-height: 140%; text-align: justify">
+                                HRowo.pl to profesjonalny portal prezentujący tylko nowe mieszkania, oraz nowe domy, dzięki któremu można w łatwy sposób znaleźć odpowiednią nieruchomość. Nasza wyszukiwarka pozwala Ci bardzo precyzyjnie zdefiniować kryteria według lokalizacji z dokładnością do dzielnicy, rodzaju nieruchomości, ceny, liczbę pokoi, powierzchni, terminu oddania do użytkowania poszukiwanej oferty, oraz wiele innych bardziej dokładnych parametrów. W celu lepszego zobrazowania lokalizacji ofert możesz skorzystać z interaktywnej mapy prezentującej położenie inwestycji mieszkaniowych w powiecie Włocławskim.
+                                Każda prezentowana oferta posiada szereg bardzo precyzyjnych informacji określających jej parametry oraz wzbogacona jest o zdjęcia i rzuty. Każda inwestycja jest dokładnie umiejscowiona na mapie i wzbogacona o informacje na temat punktów użyteczności publicznej znajdujących się w okolicy takich jak: szkoły, przedszkola, żłobki, placówki medyczne i szpitale, obiekty sportowe, usługowe, gastronomiczne oraz wiele innych. Ponad połowa inwestycji posiada Wirtualny Spacer umożliwiający w bardzo szybki i ciekawy sposób obejrzeć wszystkie detale i ocenić jakość nie wychodząc z domu. Wszystkie prezentowane oferty możesz porównywać miedzy sobą i oceniać które z nich są dla Ciebie najatrakcyjniejsze.
+                                W dziale ofert promocyjnych znajdziesz atrakcyjne cenowo nieruchomości, między innymi oferty które w ostatnim czasie zostały przecenione przez deweloperów, a także oferty Last Minute oraz nieruchomości będące w przedsprzedaży które deweloperzy sprzedają z rabatami w stosunku do standardowej oferty.
+                                Korzystając naszego systemu powiadomień będziesz na bieżąco informowany o nowych ofertach wprowadzonych do sprzedaży w powiecie Włocławskim, promocjach oraz zbliżających się Dniach Otwartych.
+                                RynekPierwotny.pl to także doskonałe źródło wiedzy analitycznej na temat aktualnej oferty, najnowsze wiadomości z rynku nieruchomości i finansowego, informacje regionalne oraz dane na temat średnich cen ofertowych w powiecie Włocławskim i zmiany ich w czasie, ilości aktualnie dostępnych mieszkań i domów oraz wielkości sprzedaży.
+                                </p>
+                                <div class="space-20"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--footer end-->
+
+        <script src="static/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="static/js/jquery-migrate.min.js" type="text/javascript"></script>
+        <script src="static/js/jquery.easing.1.3.min.js" type="text/javascript"></script>
+        <script src="static/js/jquery.backstretch.min.js" type="text/javascript"></script>
+        <script src="static/bootstrap/js/bootstrap.min.js"></script>
+        <script src="static/js/smoothscroll.js"></script>
+        <script src="static/bower_components/wow/dist/wow.min.js"></script>
+        <script src="static/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
+        <script src="static/js/modernizr.custom.97074.js" type="text/javascript"></script>
+        <script src="static/js/parallax.min.js" type="text/javascript"></script>
+        <script src="static/js/custom.js" type="text/javascript"></script>
+        <!-- Vimeo video API -->
+        <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
+        <script type="static/text/javascript" src="js/vimeo.js"></script>
+        <script src="static/contact_form/contact.js"></script>
+        <!-- Vimeo video API -->
+        <script src="static/js/headroom.js" type="text/javascript"></script>
+        <script>
+            // grab an element
+            var myElement = document.querySelector("header");
+            // construct an instance of Headroom, passing the element
+            var headroom = new Headroom(myElement);
+            // initialise
+            headroom.init();
+        </script>
+    </body>
+</html>

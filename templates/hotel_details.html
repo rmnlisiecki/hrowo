@@ -1,0 +1,74 @@
+{% extends 'index-contact.html' %}
+
+
+{% block heading %}
+    <div role="tabpanel" class="tab-pane active" id="login">
+        <div class="row">
+            <div class="am-content">
+                <div class="main-content">
+                        <!--Select & Option Elements-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel-body">
+                                <div class="container">
+                                    <div class="row">
+
+                                        <div class="contact-home-text">
+                                            <br><br><br><br>
+                                            <h3> Roman Lisiecki, CFA</h3>
+                                            <p>Obecnie Manager w dziale Doradztwa Finansowego Deloitte</p>
+                                            {% include "images_slider.html" %}
+                                            <br><br>
+
+                                            Manager w dziale doradztwa transakcyjnego Deloitte a bogatym doświadczeniem w ramach
+                                            międzynarodowych projektów M&A. Doświadczenie w badaniach finansowego i komercyjnego
+                                            due diligence na potrzeby klinetów z sektora finansowego (banki, ubezpieczenia, branże
+                                            pokrewne). Bardzo dobra znajomość Excel i PowerPoint, dobra wiedza z programowania, w tym
+                                            programowanie obiektowe.
+                                            <br><br>
+
+                                            <ul class="list-inline text-left tabs-navigation" role="tablist">
+                                                <li role="presentation" class="active" style="text-align: center" id="startClick">
+                                                    <a href="#repetitions" aria-controls="shortcuts" role="tab" data-toggle="tab"><span><i class="icon-gears"></i></span>{{ 7_choice }}</a>
+                                                </li>
+                                                <li role="presentation" style="text-align: center">
+                                                    <a href="#newWords" aria-controls="repetitions" role="tab" data-toggle="tab"><span><i class="icon-magnifying-glass"></i></span>{{ 8_choice }}</a>
+                                                </li>
+                                                <li role="presentation" style="text-align: center">
+                                                    <a href="#settings" aria-controls="newWords" role="tab" data-toggle="tab"><span><i class="icon-layers"></i></span>{{ 9_choice }}</a>
+                                                </li>
+                                                <li role="presentation" style="text-align: center">
+                                                    <a href="#results" aria-controls="settings" role="tab" data-toggle="tab"><span><i class="icon-phone"></i></span>{{ 10_choice }}</a>
+                                                </li>
+                                                <li role="presentation" style="text-align: center">
+                                                    <a href="#shortcuts" aria-controls="results" role="tab" data-toggle="tab"><span><i class="icon-document"></i></span>{{ 11_choice }}</a>
+                                                </li>
+                                            </ul>
+
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="tab-content service-tab-content">
+
+                                                        {% include "hotel_details2.html" %}
+                                                        {% include "hotel_details3.html" %}
+                                                        {% include "hotel_details4.html" %}
+                                                        {% include "hotel_details5.html" %}
+                                                        {% include "hotel_details6.html" %}
+
+                                                        <br><br><hr><br><br>
+
+                                                        {% include "similar_cars.html" %}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--tab content end-->
+</div>
+{% endblock %}
